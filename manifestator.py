@@ -1,6 +1,6 @@
 from __future__ import print_function
 
-import os,sys,glob,re
+import os,sys,glob,re,time
 from argparse import ArgumentParser
 from os.path import join,abspath
 
@@ -45,6 +45,7 @@ class Manifestator:
         self._startRoot = os.path.dirname(abspath(file))
         self._script = abspath(file)
         self._coll = set()
+        self._start = time.time()
     def root(self, reldir):
         self._root = abspath(join(self._startRoot, reldir))
 
@@ -68,6 +69,7 @@ class Manifestator:
 
     def main(self, manifest, argv):
         s = self._main(manifest, argv)
+        print("Manifestator took %.0fms" % ((time.time() - self._start) * 1000))
         sys.exit(s)
 
     def _main(self, manifest, argv):
