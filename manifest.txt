@@ -1,4 +1,9 @@
-d1/td1.txt
-d1/td2.txt
-d2/aa1.txt
-d2/aa2.txt
+./LICENSE
+./manifest.txt
+./manifestator.py
+./test/d1/td1.txt
+./test/d1/td2.txt
+./test/d2/aa1.txt
+./test/d2/aa2.txt
+./test/t1.txt
+./test_manifest.py

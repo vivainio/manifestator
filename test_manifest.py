@@ -3,9 +3,12 @@ from manifestator import Manifestator
 
 m = Manifestator(__file__)
 
-m.root(r"test")
-m.add_dirs(["d1", "d2"])
+m.root(r".")
+m.add_dirs(["."])
 m.prune(".*ignored.*")
+m.prune("^./.git.*")
+m.prune(".*pyc")
+
 m.main("manifest.txt", sys.argv)
 
 

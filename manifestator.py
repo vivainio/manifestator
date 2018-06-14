@@ -89,4 +89,4 @@ class Manifestator:
         if reports:
             print("If you think manifest is obsolete, you can recreate it with 'python %s --rewrite'" % self._script)
         else:
-            print("Manifest OK",abspath(manifest))
+            print("Manifest OK:",abspath(manifest))
